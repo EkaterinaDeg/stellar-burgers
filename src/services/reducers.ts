@@ -1,8 +1,15 @@
-import { combineReducers } from '@reduxjs/toolkit';
-import { userReducer } from './slices/userSlice';
+// src\services\reducers.ts
 
-export const rootReducer = combineReducers({
-  user: userReducer
-});
+import { combineSlices } from '@reduxjs/toolkit';
 
-export type RootState = ReturnType<typeof rootReducer>;
+import { ingredientsSlice } from './ingredients/ingredients-slice';
+import { constructorSlice } from './constructor/constructor-slice';
+import { userSlice } from './user/user-slice';
+import { ordersSlice } from './orders/orders-slice';
+
+export const rootReducer = combineSlices(
+  ingredientsSlice,
+  constructorSlice,
+  userSlice,
+  ordersSlice
+);
