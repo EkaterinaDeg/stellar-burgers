@@ -5,6 +5,8 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
+  // 👇 Добавь вот это
+devtool: 'eval-source-map',
   module: {
     rules: [
       {
