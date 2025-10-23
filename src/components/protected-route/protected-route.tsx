@@ -1,5 +1,3 @@
-// src\components\protected-route\protected-route.tsx
-
 import { Navigate, useLocation } from 'react-router-dom';
 import React from 'react';
 import { useSelector } from '@store';

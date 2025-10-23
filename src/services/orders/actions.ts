@@ -1,5 +1,3 @@
-// src\services\orders\actions.ts
-
 import {
   getFeedsApi,
   getOrderByNumberApi,

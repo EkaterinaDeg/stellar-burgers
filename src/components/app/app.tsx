@@ -1,5 +1,3 @@
-// src\components\app\app.tsx
-
 import {
   ConstructorPage,
   Feed,
