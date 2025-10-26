@@ -11,8 +11,8 @@ describe('Redux store', () => {
           bun: null,
           ingredients: []
         },
-        isLoading: false,    // реальное поле
-        error: undefined     // реальное поле
+        isLoading: false,
+        error: undefined
       },
       orders: {
         feed: {
@@ -32,7 +32,7 @@ describe('Redux store', () => {
         error: null
       },
       ingredients: {
-        ingredients: [],     // реальное поле (не items)
+        ingredients: [],
         loading: false,
         error: null
       },
