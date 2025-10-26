@@ -1,5 +1,5 @@
 import { BurgerConstructorElementUI } from '@ui';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { totalmem } from 'os';
 
 const meta = {

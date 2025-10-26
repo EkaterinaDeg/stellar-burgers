@@ -1,4 +1,4 @@
-// src\services\reducers.ts
+// src\services\user\reducers.ts
 
 import { combineSlices } from '@reduxjs/toolkit';
 

@@ -1,9 +1,18 @@
 import { emptyBurger } from '../../constants/test-burger';
-import { testBun, testFilling, testSauce } from '../../constants/test-ingredients';
-import { constructorReducer, addIngredient, removeIngredient, swapIngredient, clearBurger } from './constructor-slice';
+import {
+  testBun,
+  testFilling,
+  testSauce
+} from '../../constants/test-ingredients';
+import {
+  constructorReducer,
+  addIngredient,
+  removeIngredient,
+  swapIngredient,
+  clearBurger
+} from './constructor-slice';
 
 describe('constructorSlice', () => {
-
   it('должен добавить булку в burger.bun', () => {
     const state = constructorReducer(undefined, addIngredient(testBun));
 
@@ -53,8 +62,7 @@ describe('constructorSlice', () => {
       name: testSauce.name,
       type: 'sauce'
     });
-  }); 
-
+  });
 
   it('должен поменять два ингредиента местами по индексам', () => {
     // старт: две начинки в порядке [filling, sauce]
@@ -62,13 +70,19 @@ describe('constructorSlice', () => {
     state = constructorReducer(state, addIngredient(testSauce));
 
     // sanity-check
-    expect(state.burger.ingredients.map(i => i._id)).toEqual([testFilling._id, testSauce._id]);
+    expect(state.burger.ingredients.map((i) => i._id)).toEqual([
+      testFilling._id,
+      testSauce._id
+    ]);
 
     // меняем местами 0 и 1
     state = constructorReducer(state, swapIngredient({ first: 0, second: 1 }));
 
     // ожидаем порядок [sauce, filling]
-    expect(state.burger.ingredients.map(i => i._id)).toEqual([testSauce._id, testFilling._id]);
+    expect(state.burger.ingredients.map((i) => i._id)).toEqual([
+      testSauce._id,
+      testFilling._id
+    ]);
   });
 
   it('должен очищать булку и начинку при clearBurger', () => {
@@ -84,6 +98,5 @@ describe('constructorSlice', () => {
 
     // проверяем результат
     expect(state.burger).toEqual(emptyBurger);
-  });   
-
+  });
 });

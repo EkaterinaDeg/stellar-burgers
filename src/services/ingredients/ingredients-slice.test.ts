@@ -1,6 +1,6 @@
 import { ingredientsReducer } from './ingredients-slice';
 import { getIngredientsThunk } from './actions';
-import { testIngredients } from '../../constants/test-ingredients'
+import { testIngredients } from '../../constants/test-ingredients';
 
 const initialState = {
   ingredients: [],

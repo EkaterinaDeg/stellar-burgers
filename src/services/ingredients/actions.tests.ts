@@ -2,7 +2,6 @@ import { testIngredients } from '../../constants/test-ingredients';
 import { getIngredientsThunk } from './actions';
 import * as api from '@api';
 
-
 describe('getIngredientsThunk', () => {
   it('успешный запрос должен вернуть данные', async () => {
     jest.spyOn(api, 'getIngredientsApi').mockResolvedValue(testIngredients);
@@ -26,7 +25,9 @@ describe('getIngredientsThunk', () => {
   });
 
   it('ошибка должна вернуть rejectWithValue', async () => {
-    jest.spyOn(api, 'getIngredientsApi').mockRejectedValue(new Error('API error'));
+    jest
+      .spyOn(api, 'getIngredientsApi')
+      .mockRejectedValue(new Error('API error'));
 
     const dispatch = jest.fn();
     const thunk = getIngredientsThunk();

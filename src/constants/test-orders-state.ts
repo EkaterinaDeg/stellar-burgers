@@ -1,4 +1,4 @@
-import { OrderState } from "../services/orders/orders-slice";
+import { OrderState } from '../services/orders/orders-slice';
 
 export const ordersTestInitialState: OrderState = {
   feed: {
