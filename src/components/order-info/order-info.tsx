@@ -19,8 +19,6 @@ export const OrderInfo: FC = () => {
 
   /* Готовим данные для отображения */
   const orderInfo = useMemo(() => {
-    if (!orderData || !ingredients.length) return null;
-
     const date = new Date(orderData.createdAt);
 
     type TIngredientsWithCount = {
@@ -58,10 +56,6 @@ export const OrderInfo: FC = () => {
       total
     };
   }, [orderData, ingredients]);
-
-  if (!orderInfo) {
-    return <Preloader />;
-  }
 
   return <OrderInfoUI orderInfo={orderInfo} />;
 };
