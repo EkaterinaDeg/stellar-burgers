@@ -1,3 +1,5 @@
+// src\components\burger-constructor\burger-constructor.tsx
+
 import { FC, useMemo } from 'react';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
